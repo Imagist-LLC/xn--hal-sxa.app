@@ -160,6 +160,36 @@ body {
     color: var(--text-primary);
 }
 
+/* AI Gradient - Apple Intelligence style */
+.ai-gradient {
+    background: linear-gradient(
+        90deg,
+        #FF3B30 0%,
+        #FF9500 10%,
+        #FFCC00 20%,
+        #34C759 35%,
+        #00C7BE 45%,
+        #30B0C7 55%,
+        #007AFF 65%,
+        #5856D6 75%,
+        #AF52DE 85%,
+        #FF2D55 95%,
+        #FF3B30 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% auto;
+    animation: shimmer 3s linear infinite;
+    font-weight: 600;
+}
+
+@keyframes shimmer {
+    to {
+        background-position: 200% center;
+    }
+}
+
 /* CTA Section */
 .cta {
     padding: 160px 20px;
