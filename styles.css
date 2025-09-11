@@ -97,18 +97,12 @@ body {
     animation: fadeIn 1.2s ease 0.3s forwards;
 }
 
-.placeholder-device {
-    width: 300px;
-    height: 400px;
-    background: var(--border);
-    border-radius: 40px 40px 0 0;
+.hero-image {
+    width: 100px;
+    height: auto;
     margin: 0 auto;
-    opacity: 0.1;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: none;
+    display: block;
+    border-radius: 20px 20px 0 0;
 }
 
 /* Feature Sections */
