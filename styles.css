@@ -99,15 +99,16 @@ body {
 
 .placeholder-device {
     width: 300px;
-    height: 600px;
+    height: 400px;
     background: var(--border);
-    border-radius: 40px;
+    border-radius: 40px 40px 0 0;
     margin: 0 auto;
     opacity: 0.1;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: none;
 }
 
 /* Feature Sections */
@@ -167,13 +168,14 @@ body {
 .placeholder-icon {
     width: 64px;
     height: 64px;
-    opacity: 0.15;
-    filter: brightness(0) invert(0.4);
+    opacity: 0.25;
+    filter: brightness(0) invert(0.5);
 }
 
 @media (prefers-color-scheme: dark) {
     .placeholder-icon {
-        filter: brightness(0) invert(0.25);
+        filter: brightness(0) invert(0.3);
+        opacity: 0.3;
     }
 }
 
@@ -193,13 +195,6 @@ body {
     position: relative;
     display: inline-block;
     font-weight: 600;
-}
-
-.ai-word::before {
-    content: 'Improved';
-    position: absolute;
-    top: 0;
-    left: 0;
     background: linear-gradient(
         90deg,
         #FF3B30,
@@ -218,10 +213,23 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     background-size: 200% auto;
-    filter: blur(8px);
-    opacity: 0.6;
-    animation: shimmer 30s linear 3;
-    animation-fill-mode: forwards;
+    animation: shimmer 30s linear infinite;
+}
+
+.ai-word::before {
+    content: 'Improved';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: inherit;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: inherit;
+    filter: blur(10px);
+    opacity: 0.5;
+    z-index: -1;
+    animation: inherit;
 }
 
 @keyframes shimmer {
@@ -379,16 +387,29 @@ footer {
     .hero-tagline {
         font-size: 32px;
         margin-top: 40px;
+        line-height: 1.2;
     }
     
     .feature {
         grid-template-columns: 1fr;
         gap: 40px;
         padding: 80px 20px;
+        display: flex;
+        flex-direction: column;
     }
     
     .feature.reverse {
         direction: ltr;
+        flex-direction: column;
+    }
+    
+    .feature-visual {
+        width: 100%;
+        order: 2;
+    }
+    
+    .feature-content {
+        order: 1;
     }
     
     .feature-title {
@@ -414,7 +435,7 @@ footer {
     
     .placeholder-device {
         width: 200px;
-        height: 400px;
+        height: 280px;
     }
 }
 
