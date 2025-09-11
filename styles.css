@@ -188,33 +188,46 @@ body {
     color: var(--text-primary);
 }
 
-/* AI Gradient - Apple Intelligence style */
-.ai-gradient {
+/* AI Word with Halo Effect */
+.ai-word {
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.ai-word::before {
+    content: 'Improved';
+    position: absolute;
+    top: 0;
+    left: 0;
     background: linear-gradient(
         90deg,
-        #FF3B30 0%,
-        #FF9500 10%,
-        #FFCC00 20%,
-        #34C759 35%,
-        #00C7BE 45%,
-        #30B0C7 55%,
-        #007AFF 65%,
-        #5856D6 75%,
-        #AF52DE 85%,
-        #FF2D55 95%,
-        #FF3B30 100%
+        #FF3B30,
+        #FF9500,
+        #FFCC00,
+        #34C759,
+        #00C7BE,
+        #30B0C7,
+        #007AFF,
+        #5856D6,
+        #AF52DE,
+        #FF2D55,
+        #FF3B30
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     background-size: 200% auto;
-    animation: shimmer 20s linear infinite;
-    font-weight: 600;
+    filter: blur(8px);
+    opacity: 0.6;
+    animation: shimmer 30s linear 3;
+    animation-fill-mode: forwards;
 }
 
 @keyframes shimmer {
     to {
         background-position: 200% center;
+        opacity: 0.3;
     }
 }
 
@@ -227,7 +240,7 @@ body {
     justify-content: center;
 }
 
-/* App Store Button - Glass Effect */
+/* App Store Button - Glass Effect with Rainbow Border */
 .app-store-button {
     display: inline-flex;
     align-items: center;
@@ -236,25 +249,65 @@ body {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 980px;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: 2px solid transparent;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+.app-store-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 980px;
+    padding: 2px;
+    background: linear-gradient(
+        90deg,
+        #FF3B30,
+        #FF9500,
+        #FFCC00,
+        #34C759,
+        #00C7BE,
+        #30B0C7,
+        #007AFF,
+        #5856D6,
+        #AF52DE,
+        #FF2D55,
+        #FF3B30
+    );
+    background-size: 300% auto;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0.5;
+    animation: shimmer-button 20s linear infinite;
+}
+
+@keyframes shimmer-button {
+    to {
+        background-position: -300% center;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
     .app-store-button {
         background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    }
+    .app-store-button::before {
+        opacity: 0.6;
     }
 }
 
 .app-store-button:hover {
     background: rgba(255, 255, 255, 0.15);
     transform: scale(1.02);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.app-store-button:hover::before {
+    opacity: 0.8;
 }
 
 .button-text {
