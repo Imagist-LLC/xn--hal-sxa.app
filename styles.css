@@ -38,7 +38,7 @@ body {
     background: var(--background);
     color: var(--text-primary);
     line-height: 1.5;
-    font-size: 17px;
+    font-size: 19px;
     letter-spacing: -0.022em;
 }
 
@@ -63,11 +63,11 @@ body {
 }
 
 .hero-title {
-    font-size: 96px;
+    font-size: 120px;
     font-weight: 700;
     letter-spacing: -0.03em;
     line-height: 1.05;
-    margin-bottom: 24px;
+    margin-bottom: 60px;
     background: linear-gradient(180deg, var(--text-primary) 0%, var(--text-tertiary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -76,7 +76,7 @@ body {
 
 .hero-title::before {
     content: "○";
-    font-size: 96px;
+    font-size: 120px;
     font-weight: 100;
     position: absolute;
     margin-left: -1.15em;
@@ -85,10 +85,11 @@ body {
 }
 
 .hero-tagline {
-    font-size: 28px;
-    font-weight: 400;
+    font-size: 48px;
+    font-weight: 500;
     color: var(--text-secondary);
     letter-spacing: -0.02em;
+    margin-top: 60px;
 }
 
 .hero-visual {
@@ -136,7 +137,7 @@ body {
 }
 
 .feature-title {
-    font-size: 48px;
+    font-size: 64px;
     font-weight: 600;
     letter-spacing: -0.03em;
     line-height: 1.1;
@@ -144,7 +145,7 @@ body {
 }
 
 .feature-description {
-    font-size: 21px;
+    font-size: 28px;
     line-height: 1.4;
     color: var(--text-secondary);
     letter-spacing: -0.01em;
@@ -164,21 +165,21 @@ body {
 
 /* Placeholder Icons */
 .placeholder-icon {
-    width: 60px;
-    height: 60px;
-    opacity: 0.3;
-    filter: brightness(0) invert(0.5);
+    width: 64px;
+    height: 64px;
+    opacity: 0.15;
+    filter: brightness(0) invert(0.4);
 }
 
 @media (prefers-color-scheme: dark) {
     .placeholder-icon {
-        filter: brightness(0) invert(0.3);
+        filter: brightness(0) invert(0.25);
     }
 }
 
 .placeholder-device .placeholder-icon {
-    width: 80px;
-    height: 80px;
+    width: 72px;
+    height: 72px;
 }
 
 /* Bold Punctuation */
@@ -207,7 +208,7 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     background-size: 200% auto;
-    animation: shimmer 3s linear infinite;
+    animation: shimmer 20s linear infinite;
     font-weight: 600;
 }
 
@@ -257,7 +258,7 @@ body {
 }
 
 .button-text {
-    font-size: 19px;
+    font-size: 21px;
     font-weight: 500;
     color: var(--text-primary);
     letter-spacing: -0.01em;
@@ -315,15 +316,16 @@ footer {
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 56px;
+        font-size: 72px;
     }
     
     .hero-title::before {
-        font-size: 56px;
+        font-size: 72px;
     }
     
     .hero-tagline {
-        font-size: 21px;
+        font-size: 32px;
+        margin-top: 40px;
     }
     
     .feature {
@@ -337,11 +339,11 @@ footer {
     }
     
     .feature-title {
-        font-size: 32px;
+        font-size: 40px;
     }
     
     .feature-description {
-        font-size: 17px;
+        font-size: 21px;
     }
     
     .app-store-button {
@@ -349,7 +351,7 @@ footer {
     }
     
     .button-text {
-        font-size: 17px;
+        font-size: 19px;
     }
     
     .footer-content {
