@@ -103,6 +103,10 @@ body {
     border-radius: 40px;
     margin: 0 auto;
     opacity: 0.1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Feature Sections */
@@ -152,6 +156,29 @@ body {
     background: var(--border);
     border-radius: 20px;
     opacity: 0.1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Placeholder Icons */
+.placeholder-icon {
+    width: 60px;
+    height: 60px;
+    opacity: 0.3;
+    filter: brightness(0) invert(0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+    .placeholder-icon {
+        filter: brightness(0) invert(0.3);
+    }
+}
+
+.placeholder-device .placeholder-icon {
+    width: 80px;
+    height: 80px;
 }
 
 /* Bold Punctuation */
