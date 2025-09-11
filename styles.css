@@ -97,12 +97,38 @@ body {
     animation: fadeIn 1.2s ease 0.3s forwards;
 }
 
-.hero-image {
-    width: 100px;
-    height: auto;
+.device-container {
+    width: 300px;
+    height: 400px;
+    background: var(--border);
+    border-radius: 40px 40px 0 0;
     margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+    .device-container {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.device-screen {
+    width: 100%;
+    height: 100%;
     display: block;
-    border-radius: 20px 20px 0 0;
+    border-radius: 30px 30px 0 0;
+    overflow: hidden;
+}
+
+.device-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
 }
 
 /* Feature Sections */
@@ -432,9 +458,14 @@ footer {
         gap: 20px;
     }
     
-    .placeholder-device {
+    .device-container {
         width: 200px;
         height: 280px;
+        padding: 8px;
+    }
+    
+    .device-screen {
+        border-radius: 22px 22px 0 0;
     }
 }
 
