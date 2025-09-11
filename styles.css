@@ -168,14 +168,14 @@ body {
 .placeholder-icon {
     width: 64px;
     height: 64px;
-    opacity: 0.25;
-    filter: brightness(0) invert(0.5);
+    opacity: 0.6;
+    filter: invert(0.7);
 }
 
 @media (prefers-color-scheme: dark) {
     .placeholder-icon {
-        filter: brightness(0) invert(0.3);
-        opacity: 0.3;
+        filter: invert(0.2);
+        opacity: 0.4;
     }
 }
 
@@ -197,23 +197,25 @@ body {
     font-weight: 600;
     background: linear-gradient(
         90deg,
-        #FF3B30,
-        #FF9500,
-        #FFCC00,
-        #34C759,
-        #00C7BE,
-        #30B0C7,
-        #007AFF,
-        #5856D6,
-        #AF52DE,
-        #FF2D55,
-        #FF3B30
+        #FF3B30 0%,
+        #FF9500 15%,
+        #FFCC00 30%,
+        #34C759 45%,
+        #00C7BE 50%,
+        #30B0C7 55%,
+        #007AFF 65%,
+        #5856D6 75%,
+        #AF52DE 85%,
+        #FF2D55 95%,
+        #FF3B30 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    background-size: 200% auto;
-    animation: shimmer 30s linear infinite;
+    background-size: 300% 100%;
+    background-position: 0% 50%;
+    animation: shimmer 8s ease-in-out 1;
+    animation-fill-mode: forwards;
 }
 
 .ai-word::before {
@@ -226,16 +228,19 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     background-size: inherit;
-    filter: blur(10px);
-    opacity: 0.5;
+    background-position: inherit;
+    filter: blur(12px);
+    opacity: 0.4;
     z-index: -1;
     animation: inherit;
 }
 
 @keyframes shimmer {
-    to {
-        background-position: 200% center;
-        opacity: 0.3;
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
     }
 }
 
