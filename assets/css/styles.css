@@ -139,7 +139,7 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
-    transform: translateY(-40px);
+    transform: translateY(-24px);
 }
 
 .device-video {
@@ -152,7 +152,7 @@ body {
     display: none;
     border-radius: inherit;
     z-index: 1;
-    transform: translateY(-40px);
+    transform: translateY(-24px);
 }
 
 .device-video-light {
@@ -231,11 +231,11 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
-    transform: translateY(-40px);
+    transform: translateY(-24px);
 }
 
 .screenshot-frame img.image-primary {
-    transform: translateY(-60px);
+    transform: translateY(-32px);
 }
 
 .placeholder-device .placeholder-icon {
