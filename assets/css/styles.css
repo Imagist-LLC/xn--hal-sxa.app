@@ -108,7 +108,7 @@ body {
     overflow: hidden;
     padding: 2px;
     padding-bottom: 0;
-    transform: translateY(40px);
+    transform: none;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
@@ -125,7 +125,6 @@ body {
     overflow: hidden;
     position: relative;
     background: #000;
-    transform: translateY(-40px);
 }
 
 .device-fallback {
@@ -153,6 +152,7 @@ body {
     display: none;
     border-radius: inherit;
     z-index: 1;
+    transform: translateY(-40px);
 }
 
 .device-video-light {
@@ -232,6 +232,10 @@ body {
     object-fit: cover;
     display: block;
     transform: translateY(-40px);
+}
+
+.screenshot-frame img.image-primary {
+    transform: translateY(-60px);
 }
 
 .placeholder-device .placeholder-icon {
