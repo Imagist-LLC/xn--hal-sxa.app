@@ -137,7 +137,7 @@ body {
     display: none;
     border-radius: inherit;
     z-index: 1;
-    transform: translateY(28px);
+    transform: translateY(48px);
 }
 
 .device-video-light {
