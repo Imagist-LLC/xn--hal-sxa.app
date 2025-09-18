@@ -128,6 +128,21 @@ body {
     transform: translateY(-40px);
 }
 
+.device-fallback {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: block;
+}
+
+.device-fallback img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: translateY(-40px);
+}
+
 .device-video {
     position: absolute;
     top: 0;
@@ -137,6 +152,7 @@ body {
     object-fit: cover;
     display: none;
     border-radius: inherit;
+    z-index: 1;
 }
 
 .device-video-light {

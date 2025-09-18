@@ -24,6 +24,10 @@
             <div class="hero-visual">
                 <div class="device-container">
                     <div class="device-screen">
+                        <picture class="device-fallback">
+                            <source srcset="assets/hero-dark.heic" media="(prefers-color-scheme: dark)">
+                            <img src="assets/hero.heic" alt="Halō app screenshot" />
+                        </picture>
                         <video class="device-video device-video-light" autoplay muted playsinline poster="assets/hero.heic">
                             <source src="assets/video.mp4" type="video/mp4">
                             <source src="assets/video-dark.mov" type="video/quicktime">
