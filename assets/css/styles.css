@@ -127,21 +127,6 @@ body {
     background: #000;
 }
 
-.device-fallback {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    display: block;
-}
-
-.device-fallback img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transform: translateY(-24px);
-}
-
 .device-video {
     position: absolute;
     top: 0;
@@ -152,7 +137,7 @@ body {
     display: none;
     border-radius: inherit;
     z-index: 1;
-    transform: translateY(-24px);
+    transform: translateY(-16px);
 }
 
 .device-video-light {
@@ -231,11 +216,11 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
-    transform: translateY(-24px);
+    transform: translateY(-20px);
 }
 
 .screenshot-frame img.image-primary {
-    transform: translateY(-32px);
+    transform: translateY(-28px);
 }
 
 .placeholder-device .placeholder-icon {
