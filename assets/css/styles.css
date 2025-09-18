@@ -137,7 +137,7 @@ body {
     display: none;
     border-radius: inherit;
     z-index: 1;
-    transform: translateY(-16px);
+    transform: translateY(8px);
 }
 
 .device-video-light {
@@ -216,11 +216,11 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
-    transform: translateY(-20px);
+    transform: translateY(-40px);
 }
 
 .screenshot-frame img.image-primary {
-    transform: translateY(-28px);
+    transform: translateY(-60px);
 }
 
 .placeholder-device .placeholder-icon {
