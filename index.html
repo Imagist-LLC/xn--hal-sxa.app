@@ -23,10 +23,16 @@
             </div>
             <div class="hero-visual">
                 <div class="device-container">
-                    <picture class="device-screen">
-                        <source srcset="assets/hero-dark.heic" media="(prefers-color-scheme: dark)">
-                        <img src="assets/hero.heic" alt="Halo app screenshot" />
-                    </picture>
+                    <div class="device-screen">
+                        <video class="device-video device-video-light" autoplay loop muted playsinline poster="assets/hero.heic">
+                            <source src="assets/video.mp4" type="video/mp4">
+                            <source src="assets/video-dark.mov" type="video/quicktime">
+                        </video>
+                        <video class="device-video device-video-dark" autoplay loop muted playsinline poster="assets/hero-dark.heic">
+                            <source src="assets/video-dark.mov" type="video/quicktime">
+                            <source src="assets/video.mp4" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
             </div>
             <p class="hero-tagline">You.<br><span class="ai-word">Improved</span>.</p>
@@ -38,9 +44,11 @@
                 <p class="feature-description">Your thoughts are your own, to own.</p>
             </div>
             <div class="feature-visual">
-                <!-- Screenshot placeholder -->
-                <div class="placeholder-screenshot">
-                    <img src="assets/icons/lock.svg" alt="" class="placeholder-icon" />
+                <div class="screenshot-frame">
+                    <picture>
+                        <source srcset="assets/weather-dark.png" media="(prefers-color-scheme: dark)">
+                        <img src="assets/weather.png" alt="Halō weather intelligence screenshot" />
+                    </picture>
                 </div>
             </div>
         </section>
@@ -51,9 +59,11 @@
                 <p class="feature-description">Works offline, everywhere, anywhere. No Internet connection required.</p>
             </div>
             <div class="feature-visual">
-                <!-- Screenshot placeholder -->
-                <div class="placeholder-screenshot">
-                    <img src="assets/icons/network.svg" alt="" class="placeholder-icon" />
+                <div class="screenshot-frame">
+                    <picture>
+                        <source srcset="assets/image-dark.png" media="(prefers-color-scheme: dark)">
+                        <img src="assets/image.png" alt="Halō knowledge base screenshot" />
+                    </picture>
                 </div>
             </div>
         </section>

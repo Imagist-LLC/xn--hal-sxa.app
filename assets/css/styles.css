@@ -120,17 +120,31 @@ body {
 .device-screen {
     width: 100%;
     height: 100%;
-    display: block;
     border-radius: 38px 38px 0 0;
     overflow: hidden;
+    position: relative;
+    background: #000;
 }
 
-.device-screen img {
+.device-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top;
+    display: none;
+}
+
+.device-video-light {
     display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+    .device-video-light {
+        display: none;
+    }
+
+    .device-video-dark {
+        display: block;
+    }
 }
 
 /* Feature Sections */
@@ -174,31 +188,21 @@ body {
     letter-spacing: -0.01em;
 }
 
-.placeholder-screenshot {
+.screenshot-frame {
     width: 100%;
     aspect-ratio: 4/3;
-    background: var(--border);
-    border-radius: 20px;
-    opacity: 0.1;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+    border: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
 }
 
-/* Placeholder Icons */
-.placeholder-icon {
-    width: 120px;
-    height: 120px;
-    opacity: 1;
-    filter: invert(1) opacity(0.6);
-}
-
-@media (prefers-color-scheme: dark) {
-    .placeholder-icon {
-        filter: invert(0) opacity(0.3);
-        opacity: 1;
-    }
+.screenshot-frame picture,
+.screenshot-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .placeholder-device .placeholder-icon {
